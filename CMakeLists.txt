@@ -18,7 +18,7 @@
 ## OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 ## SOFTWARE.
 
-CONFIGURE_MPI()
+OSPRAY_CONFIGURE_MPI()
 
 # simple display-wall driver
 OPTION(OSPRAY_MODULE_DISPLAY_WALD "DisplayWald" ON)
@@ -43,10 +43,10 @@ IF (OSPRAY_MODULE_DISPLAY_WALD)
   ADD_SUBDIRECTORY(common)
   ADD_SUBDIRECTORY(service)
   ADD_SUBDIRECTORY(client)
-
   # the ospray pixelop one can use to get a ospray frame buffer to the
   # display wall
   ADD_SUBDIRECTORY(ospray)
+  ADD_SUBDIRECTORY(viewer)
 
   SET(DISPLAY_WALD_DIR  "${CMAKE_CURRENT_SOURCE_DIR}" CACHE INTERNAL "" FORCE)
 
